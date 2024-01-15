@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Sale Purchase Invoice Serial No in Order lines ',
-    'version': '16.0.0.0',
+    'version': '15.0.0.0',
     'author': 'PK Meta Code',
     'summary': 'Serial number in Sale,Purchase and Invoice Order Lines',
     'description': """This module helps to show serial number in sale,purchase, and invoice order lines.""",
