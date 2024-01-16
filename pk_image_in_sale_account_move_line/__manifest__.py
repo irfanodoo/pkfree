@@ -13,6 +13,7 @@
         'views/sale_order_line_image.xml',
         'views/invoice_order_line_image.xml',
      ],
+    'images': ['static/description/banner.png'],
     "auto_install": False,
     "installable": True,
 
