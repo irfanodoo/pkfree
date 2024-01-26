@@ -6,7 +6,6 @@
     'summary': 'Serial number in Sale,Purchase and Invoice Order Lines',
     'description': """This module helps to show serial number in sale,purchase, and invoice order lines.""",
     'category': 'Sales,Purchase,Invoice',
-    'website': 'tech4sab@gmail.com/',
     'license': 'AGPL-3',
     'depends': ['sale_management', 'purchase', 'account'],
     'data': [
