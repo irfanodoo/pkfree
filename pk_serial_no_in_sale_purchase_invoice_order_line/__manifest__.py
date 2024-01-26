@@ -8,7 +8,7 @@
     'category': 'Sales,Purchase,Invoice',
     'website': 'tech4sab@gmail.com/',
     'license': 'AGPL-3',
-    'depends': ['sale_management','purchase','account'],
+    'depends': ['sale_management', 'purchase', 'account'],
     'data': [
         'views/sale_order_views.xml',
         'views/purchase_order_line.xml',
