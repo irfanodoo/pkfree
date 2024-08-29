@@ -7,7 +7,6 @@
     "description": """Images In Sale order line and Account move line  """,
     'author': 'Irfan Ullah',
     'website': 'https://www.youtube.com/@irfanullah',
-    'company': 'PK Meta Code',
     "depends": ['sale_management', 'account'],
     "data": [
         'views/sale_order_line_image.xml',
