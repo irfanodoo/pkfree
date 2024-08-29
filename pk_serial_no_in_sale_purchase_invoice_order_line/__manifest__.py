@@ -2,7 +2,8 @@
 {
     'name': 'Sale Purchase Invoice Serial No in Order lines ',
     'version': '17.0.0.0',
-    'author': 'PK Meta Code',
+    'author': 'Irfan Ullah',
+    'website': 'https://www.youtube.com/@irfanullah',
     'summary': 'Serial number in Sale,Purchase and Invoice Order Lines',
     'description': """This module helps to show serial number in sale,purchase, and invoice order lines.""",
     'category': 'Sales,Purchase,Invoice',
