@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <template id="report_cash_flow_inherit" inherit_id="account_reports.company_information">
+    <xpath expr="//div[@class='row']" position="after">
+        <div class="row">
+            <div class="col-6">
+             </div><div class="col-6">
+             </div><div class="col-3">
+             </div>
+            <div class="col-6 text-right">
+                <img t-if="env.company.logo" t-att-src="image_data_uri(res_company.logo)"
+                     alt="Company Logo" style="height: auto; width: auto; max-width: 150px; max-height: 150px;"/>
+            </div>
+        </div>
+    </xpath>
+</template>
+
+</odoo>
