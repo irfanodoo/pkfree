@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--        Wizard form view-->
+    <record id="account_wizard_form_view_id" model="ir.ui.view">
+        <field name="name">account.wizard.form.view</field>
+        <field name="model">account.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Report Options">
+                <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                </group>
+                <footer>
+                    <button name="print_pdf_report" string="PDF"
+                            type="object" default_focus="1"
+                            class="oe_highlight"/>
+                    <button string="Cancel" class="btn btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <!--        Window Action for Wizard-->
+    <record id="action_account_wizard" model="ir.actions.act_window">
+        <field name="name">Cash Flow Statements</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.wizard</field>
+        <field name="view_id"
+               ref="pk_advance_cash_flow_pdf_statement.account_wizard_form_view_id"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="pdf_cash_flow_report_id" model="ir.actions.report">
+            <field name="name">PDF Cash Flow Report</field>
+            <field name="model">account.wizard</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">pk_advance_cash_flow_pdf_statement.cash_flow_pdf_temp_id</field>
+            <field name="report_file">pk_advance_cash_flow_pdf_statement.cash_flow_pdf_temp_id</field>
+         </record>
+
+    <menuitem id="account_bank_book_menu" name="PDF Cash Flow Statement"
+              sequence="3"
+              action="pk_advance_cash_flow_pdf_statement.action_account_wizard"
+              parent="account.account_reports_legal_statements_menu" />
+</odoo>

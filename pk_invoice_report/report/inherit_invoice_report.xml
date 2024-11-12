@@ -1,0 +1,22 @@
+<odoo>
+    <template id="invoice_report_inherit_id" inherit_id="account.report_invoice_document">
+        <xpath expr="//table[1]/thead/tr[1]/th[2]" position="replace">
+        <th class="text-end">Hours</th>
+        </xpath>
+        <xpath expr="//table[1]/thead/tr[1]/th[2]" position="before">
+        <th class="text-end">Start Date</th>
+        <th class="text-end">End Date</th>
+        </xpath>
+        <xpath expr="//table[@name='invoice_line_table']/tbody/t[@t-foreach='lines']/tr/t[@name='account_invoice_line_accountable']/td[@name='td_quantity']"
+               position="before">
+            <td class="text-end">
+                    <span t-field="line.deferred_start_date"/>
+                </td>
+                <td class="text-end">
+                    <span t-field="line.deferred_end_date"/>
+                </td>
+        </xpath>
+    </template>
+</odoo>
+
+

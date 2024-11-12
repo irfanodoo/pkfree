@@ -1,0 +1,31 @@
+<odoo>
+    <template id="report_invoice_document_inherited" inherit_id="account.report_invoice_document" name="Outstanding Invoices on Invoice Report">
+
+        <!-- Replace the existing table with your custom table -->
+        <xpath expr="//div[@class='mt-5 clearfix']//table" position="replace">
+            <table class="table table-sm o_main_table table-borderless">
+                <thead>
+                    <tr>
+                        <th class="text-start">Description</th>
+                        <th class="text-end">Quantity</th>
+                        <th class="text-end">Unit Price</th>
+                        <th class="text-end">Taxes</th>
+                        <th class="text-end">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="o._get_grouped_invoice_lines()" t-as="line">
+                        <tr>
+                            <td class="text-start"><span t-esc="line['product_name']"/></td>
+                            <td class="text-end"><span t-esc="line['total_quantity']"/></td>
+                            <td class="text-end"><span t-esc="line['unit_price']"/></td>
+                            <td class="text-end"><span t-esc="line['tax_rate']"/>%</td> <!-- Show tax rate -->
+                            <td class="text-end"><span t-esc="line['total_price']"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </xpath>
+
+    </template>
+</odoo>

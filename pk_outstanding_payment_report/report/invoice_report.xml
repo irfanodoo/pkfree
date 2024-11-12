@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<template id="report_invoice_document_inherited" inherit_id="account.report_invoice_document"
+          name="Outstanding Invoices on Invoice Report">
+
+    <xpath expr="//div[@class='mb-2']"  position="before">
+    <t t-if="o.partner_id.unpaid_invoices">
+        <br></br>
+        <br></br>
+        <br></br>
+            <h3>Outstanding Invoices</h3>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Invoice Date</th>
+                        <th>Invoice Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="o.partner_id.unpaid_invoices" t-as="inv">
+                        <tr>
+                            <td class="text-end">
+                                <span t-esc="inv.invoice_date"/>
+                            </td>
+                            <td class="text-end">
+                                <span t-esc="inv.amount_total" />
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </t>
+    </xpath>
+</template>
+</odoo>
